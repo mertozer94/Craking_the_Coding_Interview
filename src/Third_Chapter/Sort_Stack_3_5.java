@@ -11,7 +11,7 @@ an additional temporary stack, but you may not copy the elements into any other 
 public class Sort_Stack_3_5 {
 
     public void sort(Stack<Integer> s){
-        Stack<Integer> r =new Stack<>();
+        Stack<Integer> r = new Stack<>();
 
         while (!s.isEmpty()){
             int temp = s.pop();

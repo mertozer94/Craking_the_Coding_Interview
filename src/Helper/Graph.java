@@ -3,8 +3,7 @@ package Helper;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-public class Graph
-{
+public class Graph {
         public int v;
         public LinkedList<Edge> adjListArray[];
         public Edge getEdge(int id){
@@ -15,8 +14,7 @@ public class Graph
             }
             throw new NoSuchElementException("Vertex is not in the graph");
         }
-        public Graph()
-        {
+        public Graph(){
             this.v = 5;
 
             adjListArray = new LinkedList[v];
@@ -26,8 +24,7 @@ public class Graph
             }
         }
 
-        public void addEdge(Graph graph, Edge src, Edge dest)
-        {
+        public void addEdge(Graph graph, Edge src, Edge dest){
 
             graph.adjListArray[Integer.parseInt(src.toString())].addFirst(dest);
             graph.adjListArray[Integer.parseInt(dest.toString())].addFirst(src);
@@ -48,8 +45,7 @@ public class Graph
                 }
             }
         }
-        public void printGraph()
-        {
+        public void printGraph(){
             for(int v = 0; v < this.v; v++)
             {
                 System.out.println("Adjacency list of vertex "+ v);
